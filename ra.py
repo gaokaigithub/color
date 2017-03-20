@@ -80,7 +80,7 @@ def cd(u,v):
     c = (4-u-10*v)/v
     d = (1.708*v+0.404-1.481*u)/v
     return c,d
-#计算ukip,vkip,很明显这里有问题，int和list
+#计算ukip,vkip
 def kip(l,Al):
     ur = rdata(l,Al)[0]
     vr = rdata(l,Al)[1]

@@ -1,5 +1,6 @@
 import numpy as np
 from cur import curs
+from tem import tem
 #求出色坐标以及三刺激值、色温,K值做1处理,使用1931的cie值
 def xyz(l,Al):
     xd,yd,zd = np.loadtxt("xyz.csv",delimiter=",",usecols=(1,2,3),unpack=True)
@@ -30,4 +31,5 @@ def xyz(l,Al):
     Z = k*Z1
     x = X/(X+Y+Z)
     y = Y/(X+Y+Z)
-    return [x,y,X,Y,Z,k,p]
+    t = tem(x,y)
+    return [x,y,t,X,Y,Z,k,p]
